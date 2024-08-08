@@ -1,0 +1,147 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Titan+One&display=swap');
+
+/* Aplicar fuentes */
+body {
+    font-family: "IM Fell DW Pica", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: url('https://i.pinimg.com/originals/e5/37/d6/e537d679f43569aa6c5db9450c2253d2.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Elimina los scrolls */
+}
+
+/* Estilo del logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Estilo del título */
+.titulo {
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-family: "Titan One", sans-serif; /* Fuente más llamativa para el título */
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Resplandor alrededor del texto */
+}
+
+/* Estilo del contenedor principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 40px); /* Resta la altura del header si es necesario */
+    padding: 10px; /* Ajusta el padding aquí */
+    box-sizing: border-box;
+}
+
+/* Estilo de la primera sección */
+.seccion1 {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 40px;
+    margin: 30px;
+    padding-left: 30px;
+    width: 1000px;
+    height: 78%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Resplandor alrededor del contenedor */
+}
+
+/* Estilo de la segunda sección */
+.seccion2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 50px;
+    width: 30%;
+    height: 90%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px; /* Controla el ancho máximo */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Resplandor alrededor del contenedor */
+    margin-top: -20px; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilo del contenedor de texto */
+.contenedor-caja-texto, .parrafo, .contenedor-botones {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los cuadros de texto */
+textarea.cajatexto {
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px; /* Altura fija para el textarea */
+    width: 700px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none; /* Desactiva el redimensionamiento del textarea */
+    font-size: 16px;
+    text-align: center;
+}
+textarea.cajatexto2 {
+    display: block;
+    padding: 50px;
+    border-radius: 10px;
+    height: 300px; /* Altura fija para el textarea */
+    width: 300px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none; /* Desactiva el redimensionamiento del textarea */
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilo de los botones */
+.btn-encriptar, .btn-desencriptar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffb3b3; /* Rosa pastel */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s; /* Añade una transición suave al cambio de color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Resplandor alrededor del botón */
+}
+
+.btn-encriptar:hover, .btn-desencriptar:hover {
+    background-color: #ff9999; /* Rosa más oscuro para el hover */
+}
+
+/* Estilo para el párrafo */
+.parrafo p {
+    font-size: medium;
+    color: black;
+    font-family: "IM Fell DW Pica", serif;
+    
+}
+
+.gato {
+
+     margin-left: 20px;
+     padding-top: 40px;
+     max-width: 400px;
+     height: auto;
+     border-radius: 10px;
+     margin-top: -70px; /* Mueve la imagen hacia arriba */
+
+    
+}
+
