@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
@@ -52,7 +51,7 @@ main {
 
 .seccion1 {
     background-color: rgba(255, 255, 255, 0.8);
-  
+
     padding: 40px;
     margin-right: 15px;
     margin-left: 30px;
@@ -62,6 +61,7 @@ main {
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 0px 18px 4px rgba(120, 103, 120, 1);
@@ -76,7 +76,7 @@ main {
     margin-right: 15px;
     margin-left: 30px;
     width: 45%;
-    height: 83%;
+    height: 82%;
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
@@ -85,15 +85,28 @@ main {
     justify-content: center;
     box-shadow: 0px 0px 18px 4px rgba(120, 103, 120, 1);
     /* Resplandor alrededor del contenedor */
-    position: relative; /* Asegura que el contenido dentro no afecta la disposición */
-    overflow: hidden; /* Evita que el contenido desborde */
+    position: relative;
+    /* Asegura que el contenido dentro no afecta la disposición */
+    overflow: hidden;
+    /* Evita que el contenido desborde */
 }
+#btn-ok {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: 15px auto; /* Asegúrate de centrar el botón con `auto` */
+    text-align: center;
+}
+
 
 #output-text {
     width: 100%;
     height: 90%;
     font-family: "Delius", cursive;
     font-size: 17px;
+
+    
 }
 
 #input-text {
@@ -105,6 +118,12 @@ main {
 #shift {
     font-family: "Delius", cursive;
     font-size: 17px;
+    
+}
+#option {
+    display: block;
+    margin-top: 15px;
+    
 }
 
 /* Estilo del contenedor de texto */
@@ -116,17 +135,28 @@ main {
 
 #btn-encrypt,
 #btn-decrypt,
-#btn-clear,
+#btn-clear {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 #btn-ok {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .contenedor-caja-texto {
     height: 60%;
     width: 100%;
 }
+
 
 #encryption-type {
     font-family: "Itim", cursive;
@@ -213,14 +243,19 @@ textarea.cajatexto2 {
     width: 50%;
     height: auto;
     border-radius: 10px;
+    margin-top: 90px;
 
 }
 
 /* Estilo del contenedor del mensaje del gato */
 .mensaje-gato {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     position: absolute;
-    top: 10px;
+    top: 35px;
     left: 50%;
+    height: 50px;
     transform: translateX(-50%);
     width: 80%;
     max-width: 600px;
@@ -232,16 +267,20 @@ textarea.cajatexto2 {
     color: black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     margin: 0;
-    z-index: 10; /* Asegura que el mensaje esté por encima de la imagen */
-    opacity: 0.9; /* Ajusta el nivel de opacidad */
+    z-index: 10;
+    /* Asegura que el mensaje esté por encima de la imagen */
+    opacity: 0.9;
+    /* Ajusta el nivel de opacidad */
 }
 
 /* Triángulo de diálogo */
 .mensaje-gato::before {
     content: "";
     position: absolute;
-    bottom: -20px; /* Ajusta la posición vertical */
-    left: 50%; /* Centra horizontalmente */
+    bottom: -20px;
+    /* Ajusta la posición vertical */
+    left: 50%;
+    /* Centra horizontalmente */
     transform: translateX(-50%);
     width: 0;
     height: 0;
@@ -249,11 +288,12 @@ textarea.cajatexto2 {
     border-right: 20px solid transparent;
     border-top: 20px solid pink;
 }
+
 /* Estilo del texto dentro del mensaje */
 .mensaje-gato p {
     margin: 0;
     padding: 0;
-    font-size: 18px; 
+    font-size: 18px;
     color: black;
     font-family: "Itim", cursive;
 }
