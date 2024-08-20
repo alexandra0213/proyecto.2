@@ -1,5 +1,6 @@
 import { encriptarTexto, desencriptarTexto, limpiar } from "./module1.js";
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const botonEncriptar = document.querySelector("#btn-encrypt");
     const botonDesencriptar = document.querySelector("#btn-decrypt");
