@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Configurar el intervalo para cambiar el mensaje cada 20 segundos
         setInterval(() => {
             mostrarMensajeGato();
-        }, 20000); // 20 segundos (10s visible + 10s de espera)
+        }, 20000);
     }
 
     // Mostrar u ocultar el campo de desplazamiento según el método seleccionado
