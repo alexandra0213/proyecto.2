@@ -9,7 +9,7 @@
 
 >Hay situaciones en la vida cotidiana en la que tenemos necesidad de enviar mensajes sin que nadie se enteré lo que escribimos y solo se requiere que a la persona que le enviamos lo sepa. 
 
-![Mensajes cotidianos](./assets/img/mensajes.jpg "Mensajes cotidianos")
+![Mensajes cotidianos](./img/mensajescotidianos.jpeg "Mensajes cotidianos")
 
 Con los mensajes ocultos e imposibles de leer a simple vista es la solución al caso; se puede enviar textos a amigos y pareja de forma segura sin la necesidad que una persona externa lo lea o entienda.
 
