@@ -1,5 +1,4 @@
-// Funciones de encriptación y desencriptación
-
+// Encriptación y desencriptación para Base64
 function encriptarBase64(texto) {
     return btoa(texto);
 }
@@ -8,6 +7,7 @@ function desencriptarBase64(texto) {
     return atob(texto);
 }
 
+// Encriptación y desencriptación para Hexadecimal
 function encriptarHex(texto) {
     return Array.from(texto).map(c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
 }
@@ -16,19 +16,23 @@ function desencriptarHex(texto) {
     return texto.match(/.{1,2}/g).map(h => String.fromCharCode(parseInt(h, 16))).join('');
 }
 
+// Encriptación ROT13 extendida a números
 function encriptarROT13(texto) {
-    return texto.replace(/[a-zA-Z]/g, function(c) {
+    return texto.replace(/[a-zA-Z0-9]/g, function(c) {
         const code = c.charCodeAt(0);
         if (code >= 65 && code <= 90) return String.fromCharCode(((code - 65 + 13) % 26) + 65);
         if (code >= 97 && code <= 122) return String.fromCharCode(((code - 97 + 13) % 26) + 97);
+        if (code >= 48 && code <= 57) return String.fromCharCode(((code - 48 + 5) % 10) + 48); // ROT13 para números
     });
 }
 
+// Encriptación y desencriptación César extendida a números
 function encriptarCesar(texto, desplazamiento) {
-    return texto.replace(/[a-zA-Z]/g, function(c) {
+    return texto.replace(/[a-zA-Z0-9]/g, function(c) {
         const code = c.charCodeAt(0);
-        const base = (code >= 65 && code <= 90) ? 65 : 97;
-        return String.fromCharCode(((code - base + desplazamiento) % 26) + base);
+        if (code >= 65 && code <= 90) return String.fromCharCode(((code - 65 + desplazamiento) % 26) + 65);
+        if (code >= 97 && code <= 122) return String.fromCharCode(((code - 97 + desplazamiento) % 26) + 97);
+        if (code >= 48 && code <= 57) return String.fromCharCode(((code - 48 + desplazamiento) % 10) + 48);
     });
 }
 
@@ -36,6 +40,7 @@ function desencriptarCesar(texto, desplazamiento) {
     return encriptarCesar(texto, 26 - desplazamiento);
 }
 
+// Encriptación y desencriptación a binario
 function encriptarTextoABinario(texto) {
     return Array.from(texto).map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join(' ');
 }
@@ -44,12 +49,14 @@ function desencriptarBinarioATexto(texto) {
     return texto.split(' ').map(b => String.fromCharCode(parseInt(b, 2))).join('');
 }
 
+// Limpiar la entrada y salida
 function limpiar() {
     document.querySelector("#input-text").value = "";
     document.querySelector("#output-text").value = "";
     document.querySelector("#mensaje-gato").textContent = ''; // Limpiar el mensaje del gato
 }
 
+// Función general para encriptar texto según el método
 function encriptarTexto(texto, metodo) {
     switch (metodo) {
         case 'base64':
@@ -67,6 +74,7 @@ function encriptarTexto(texto, metodo) {
     }
 }
 
+// Función general para desencriptar texto según el método
 function desencriptarTexto(texto, metodo) {
     switch (metodo) {
         case 'base64':
@@ -97,6 +105,4 @@ export {
     desencriptarCesar,
     encriptarTextoABinario,
     desencriptarBinarioATexto,
-    
 };
-
